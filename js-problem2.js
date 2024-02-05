@@ -15,7 +15,7 @@ function lowestNumber(array){
                   smallNumber = num;
             }
       }
-      //console.log(smallNumber);
+      console.log(smallNumber);
 }
 lowestNumber(heights2)
 
@@ -37,7 +37,7 @@ function smallestName(friendArray){
                   small = friend;
             }
       }
-      //console.log(small);
+      console.log(small);
 }
 
 smallestName(friendName);
@@ -63,7 +63,7 @@ function calculateElectronicsBudget(laptop, tablet, mobile){
       return laptop*laptopPrice + tablet*tabletPrice + mobile*mobilePrice;
 }
 const totalBudget = calculateElectronicsBudget(2, 4, 7);
-//console.log(totalBudget);
+console.log(totalBudget);
 
 
 /*
@@ -100,8 +100,6 @@ function findAveragePhonePrice(phones){
             const price = ph.price;
             sum += price;
       }
-      // console.log(sum);
-      // console.log(products);
       const average = (sum / products).toFixed(0);
       return average;
 }
@@ -113,10 +111,29 @@ console.log(findAveragePhonePrice(phones));
 For each employee their current salary is calculated by multiplying yearly increment with experience then adding the result to the starting salary. Now calculate is the total salary has to be provided by the company in a month.
 ```
  const employees = [
-            { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
-            { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
-            { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
-            { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
-        ];
-```
+      { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+      { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+      { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+      { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+];
 */
+
+const employees =[
+      {name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+      {name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+      {name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+      {name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+];
+
+function getTotalSalary(employees){
+      let totalSalary = 0;
+      for (const info of employees){
+            const startingSalary = info.starting;
+            const increment = info.increment;
+            const experience = info.experience;
+            const totalSalaryReport = startingSalary + (increment*experience);
+            totalSalary += totalSalaryReport;
+      }
+      console.log(totalSalary);
+}
+getTotalSalary(employees);
