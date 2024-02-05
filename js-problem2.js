@@ -29,7 +29,7 @@ Find the friend with the smallest name.
 */
 
 
-const friendName = ['rahim', 'robin', 'rashed', 'rafi', 'ron','ro','r',];
+const friendName = ['rahim', 'robin', 'rafi', 'ron', 'rashed'];
 function smallestName(friendArray){
       let small = friendArray[0];
       for (const friend of friendArray){
