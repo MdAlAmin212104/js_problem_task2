@@ -31,9 +31,9 @@ Find the friend with the smallest name.
 
 const friendName = ['rahim', 'robin', 'rashed', 'rafi', 'ron','ro','r',];
 function smallestName(friendArray){
-      let small = friendArray[0].length;
+      let small = friendArray[0];
       for (const friend of friendArray){
-            if(friend.length < small){
+            if(friend.length < small.length){
                   small = friend;
             }
       }
