@@ -42,6 +42,10 @@ function smallestName(friendArray){
 
 smallestName(friendName);
 
+
+
+
+
 /*
 ### Task-3: 
 Your task is to calculate the `total budget` required to buy electronics:
@@ -52,7 +56,14 @@ Your task is to calculate the `total budget` required to buy electronics:
 
 Write a JavaScript function named `calculateElectronicsBudget` that takes in the number of `laptop, tablets, and mobile` and returns the `total money required`.
 */
-
+function calculateElectronicsBudget(laptop, tablet, mobile){
+      const laptopPrice = 35000;
+      const tabletPrice = 15000;
+      const mobilePrice = 20000;
+      return laptop*laptopPrice + tablet*tabletPrice + mobile*mobilePrice;
+}
+const totalBudget = calculateElectronicsBudget(2, 4, 7);
+console.log(totalBudget);
 
 
 /*
